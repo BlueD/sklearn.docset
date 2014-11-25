@@ -6,5 +6,5 @@ virtualenv:
 install:
     - sudo apt-get install -qq python-scipy python-nose python-pip python-matplotlib
     - pip install -r requirements.txt
-    - pip install --download-cache=sklearn.tar.gz
-    - tar xvf sklearn.tar.gz
+    - pip install --download-cache=. scikit-learn
+    - tar xvf scikit-learn*.tar.gz
