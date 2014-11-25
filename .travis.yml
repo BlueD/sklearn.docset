@@ -1,13 +1,21 @@
 language: python
-
 install:
-    - sudo apt-get install optipng
-    - deactivate
-    - bash mkhtml.sh
-    - source ~/virtualenv/python2.7/bin/activate
-    - pip install -r requirements.txt
-    - cd cache/scikit-learn*/doc/_build/
-    - doc2dash -n Scikit-learn html/stable/
-
+- sudo apt-get install optipng
+- deactivate
+- bash mkhtml.sh
+- source ~/virtualenv/python2.7/bin/activate
+- pip install -r requirements.txt
+- cd cache/scikit-learn*/doc/_build/
+- doc2dash -n Scikit-learn html/stable/
 script:
-    - tar czf Scikit-learn.docset.tgz Scikit-learn.docset/
+- tar czf Scikit-learn.docset.tgz Scikit-learn.docset/
+deploy:
+  provider: releases
+  api_key:
+    secure: SbnT0MibpiPQGqYoH5MiZqaJ0VTIe1M4z45HZYs068oqOJgCEnqCOyyIIVCAA8K2PND7osU2JWIoStfUPGvXze60L6GlmTugsCSGJlQLX1OF0Sw0/mG01N26ftmJzldvedBWCbTaurzXHmGzDfPe9TDrOblu4qpfAkg+cBOUodU=
+  file: Scikit-learn.docset.tgz
+  skip_cleanup: true 
+  on:
+    tags: true
+    all_branches: true
+    repo: BlueD/sklearn.docset
