@@ -12,5 +12,5 @@ pip install --download=cache/ scikit-learn
 cd cache/
 tar xf $(ls scikit-learn*.tar.gz)
 cd scikit-learn*/doc/
-make html && make optipng 1>/dev/null
+make html 1>/dev/null && make optipng 1>/dev/null
 cd ../..
