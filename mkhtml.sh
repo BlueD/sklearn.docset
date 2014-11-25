@@ -2,7 +2,7 @@
 deactivate
 
 wget http://repo.continuum.io/miniconda/Miniconda-3.7.0-Linux-x86_64.sh -O miniconda.sh
-bash ./miniconda.sh
+bash ./miniconda.sh -b
 export PATH=/home/travis/miniconda/bin:$PATH
 conda update --yes conda
 conda install --yes mkl
