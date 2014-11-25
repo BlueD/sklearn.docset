@@ -5,8 +5,12 @@ export PATH=/home/travis/miniconda/bin:$PATH
 conda update --yes conda
 conda install --yes mkl
 
-conda install --yes numpy scipy matplotlib scikit-learn
+conda install --yes numpy scipy matplotlib scikit-learn sphinx
 
 mkdir cache
 pip install --download=cache/ scikit-learn
-ls -l cache/
+cd cache/
+tar xf $(ls scikit-learn*.tar.gz)
+cd scikit-learn*/doc/
+make html && make optipng
+cd ../..

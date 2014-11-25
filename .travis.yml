@@ -3,4 +3,7 @@ language: python
 install:
     - deactivate
     - bash mkhtml.sh
+    - source ~/virtualenv/python2.7/bin/activate
     - pip install -r requirements.txt
+    - cd cache/scikit-learn*/doc/_build/
+    - doc2dash -n Scikit-learn html
