@@ -1,10 +1,5 @@
 language: python
 
-virtualenv:
-    system_site_packages: true
-
 install:
-    - sudo apt-get install -qq python-scipy python-nose python-pip python-matplotlib
-    - pip install --download-cache=. scikit-learn
-    - tar xvf $(ls scikit-learn*.tar.gz)
+    - bash mkhtml.sh
     - pip install -r requirements.txt
