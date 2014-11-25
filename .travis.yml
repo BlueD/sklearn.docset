@@ -1,6 +1,6 @@
 language: python
 
 install:
-    - source ~/virtualenv/python2.7/bin/deactivate
+    - deactivate
     - bash mkhtml.sh
     - pip install -r requirements.txt
