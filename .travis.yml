@@ -1,0 +1,8 @@
+language: python
+
+virtualenv:
+    system_site_packages: true
+install:
+- pip install -r requirements.txt
+- wget 'https://pypi.python.org/packages/source/s/scikit-learn/scikit-learn-0.15.1.tar.gz#md5=236aa05b1a6d067c28f34d5e9942af17'
+- tar xf scikit-learn*.tar.gz
