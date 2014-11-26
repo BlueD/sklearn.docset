@@ -13,5 +13,5 @@ cd cache/
 tar xf $(ls scikit-learn*.tar.gz)
 cd scikit-learn*/doc/
 make -j4 html
-make -j4 optipng
+#make -j4 optipng
 cd ../..
