@@ -5,7 +5,7 @@ export PATH=/home/travis/miniconda3/bin:$PATH
 conda update --yes conda
 conda install --yes mkl
 
-conda install --yes numpy scipy matplotlib scikit-learn sphinx pil
+conda install --yes numpy scipy matplotlib scikit-learn sphinx pillow
 
 mkdir cache
 pip install --download=cache/ scikit-learn
