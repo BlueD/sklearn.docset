@@ -1,11 +1,11 @@
 #!/usr/bin/bash
-wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
 bash ./miniconda.sh -b
-export PATH=/home/travis/miniconda3/bin:$PATH
+export PATH=/home/travis/miniconda/bin:$PATH
 conda update --yes conda
 conda install --yes mkl
 
-conda install --yes numpy scipy matplotlib scikit-learn sphinx pillow
+conda install --yes numpy scipy matplotlib scikit-learn sphinx pil
 
 mkdir cache
 pip install --download=cache/ scikit-learn
